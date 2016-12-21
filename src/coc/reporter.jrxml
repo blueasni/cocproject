@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2014-11-16T13:02:35 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23602e12-efff-4606-bfb2-a643b857be34">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="trial"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT trial.trainee.`traineeID`,
+	trial.trainee.`fName`,
+	trial.trainee.`mName`,
+	trial.trainee.`lName`,
+	trial.trainee.`fieldOfStudy`,
+	trial.trainee.level,
+	trial.trainee.`dateOfCompetation`,
+	 trial.trainee.photo 
+FROM trial.trainee]]>
+	</queryString>
+	<field name="traineeID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fieldOfStudy" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="level" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateOfCompetation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="1" splitType="Prevent"/>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Prevent">
+			<staticText>
+				<reportElement x="170" y="17" width="236" height="30" uuid="e740ac46-3af0-4bf6-9d20-c85ed737afce"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[this is the header]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Prevent"/>
+	</columnHeader>
+	<detail>
+		<band height="355" splitType="Prevent">
+			<textField>
+				<reportElement x="180" y="40" width="140" height="30" uuid="fbfa901d-ed42-495e-a0fa-beb06200b15d"/>
+				<textFieldExpression><![CDATA[$F{traineeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="70" width="140" height="30" uuid="16264f0e-3a72-4360-b679-3e97852c0617"/>
+				<textFieldExpression><![CDATA[$F{fName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="100" width="140" height="30" uuid="28298c1d-223c-451d-b875-1b86b4479fd5"/>
+				<textFieldExpression><![CDATA[$F{mName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="130" width="140" height="30" uuid="e769856c-9eb9-428c-80d0-c2d96c7ff1b4"/>
+				<textFieldExpression><![CDATA[$F{lName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="160" width="140" height="30" uuid="ff1f2fdd-ad82-4131-970d-670504ab44c7"/>
+				<textFieldExpression><![CDATA[$F{fieldOfStudy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="30" width="119" height="30" uuid="6dfad114-55d1-49c7-898c-83403352d4ab"/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="60" width="119" height="30" uuid="d0928f12-26a1-4960-9279-508c198a741d"/>
+				<textFieldExpression><![CDATA[$F{dateOfCompetation}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="40" width="81" height="30" uuid="7fe4733a-d6cf-4cde-b04c-16ced0b4a980"/>
+				<text><![CDATA[traineeID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="70" width="79" height="30" uuid="ca34559e-f613-4b05-a664-fe93900ec3fa"/>
+				<text><![CDATA[fName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="100" width="79" height="30" uuid="880382ef-6340-4d0b-8d00-f95abef17acd"/>
+				<text><![CDATA[mName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="130" width="79" height="30" uuid="9ecd6d51-b5bb-424c-880e-b7b18eae61ed"/>
+				<text><![CDATA[lName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="160" width="79" height="30" uuid="9424b28d-7645-4449-ad2e-eaa906cfdd50"/>
+				<text><![CDATA[fieldOfStudy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="30" width="79" height="30" uuid="8b3a13a3-da3c-4560-8d22-40a44f2c4c0e"/>
+				<text><![CDATA[level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="60" width="79" height="30" uuid="0c4ea0ee-546d-4332-ab2b-cb22a12a3e9c"/>
+				<text><![CDATA[dateOfCompetation]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Prevent"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Prevent">
+			<break>
+				<reportElement x="0" y="50" width="96" height="1" uuid="9d19fc22-7bfc-47cf-ac4b-8807b698c864"/>
+			</break>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Prevent"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2014-12-14T14:59:59 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tempo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3f0dfaa6-c4be-4072-9a2c-58f074ca885b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="trial"/>
+	<queryString>
+		<![CDATA[SELECT trial.trainee.`traineeID`,
+	trial.trainee.`fName`,
+	trial.trainee.`mName`,
+	trial.trainee.`lName`,
+	trial.trainee.`fieldOfStudy`,
+	trial.trainee.level,
+	trial.trainee.`dateOfIssue`,
+	trial.trainee.photo,
+	trial.trainee.age,
+	trial.trainee.sex,
+	trial.trainee.`occupationID`,
+	trial.trainee.classification,
+	trial.trainee.`industryName`,
+	trial.trainee.`assessmentCenter`,
+	trial.trainee.`trainingProvider`,
+	trial.trainee.`dateOfCompetation`,
+	trial.trainee.`contactNo`,
+	trial.trainee.`managedBy`
+FROM trial.trainee]]>
+	</queryString>
+	<field name="traineeID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fieldOfStudy" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="level" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateOfIssue" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="Var1" class="java.lang.String">
+		<variableExpression><![CDATA[$F{fieldOfStudy}]]></variableExpression>
+	</variable>
+	<variable name="Var2" class="java.lang.String">
+		<variableExpression><![CDATA[$F{level}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="801" splitType="Stretch">
+			<image>
+				<reportElement x="44" y="210" width="455" height="379" uuid="fafddad5-45f0-4fba-a440-22c5dc57df62"/>
+				<imageExpression><![CDATA["C:/Users/userpc/Desktop/IReport video/bg.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="227" y="170" width="100" height="97" uuid="95ad7bd4-cb41-49d8-9d22-741073bfb7b9"/>
+				<imageExpression><![CDATA[$F{photo}]]></imageExpression>
+			</image>
+			<textField pattern="MMMM d, yyyy" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="396" y="150" width="158" height="30" forecolor="#B00C09" backcolor="#FFFFFF" uuid="e252d409-9650-4d7b-8e42-f701c512659e"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Bodoni MT Condensed" size="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="127" width="157" height="22" forecolor="#B00C09" uuid="eff43aeb-cd9c-46c3-b142-5efd24f176dd"/>
+				<textElement textAlignment="Left">
+					<font fontName="Bodoni MT Condensed" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{traineeID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="300" y="150" width="96" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="94cc4505-c54b-4b79-a51a-2b171f0ddc8c"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Bodoni MT Condensed" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Date issued:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="127" width="96" height="22" uuid="a27e630d-dbce-4a78-a41d-1375b45634da"/>
+				<textElement textAlignment="Right">
+					<font fontName="Bodoni MT Condensed" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificate No.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="68" width="90" height="82" uuid="bdb846c7-4811-4d36-9398-51f828ce80c9"/>
+				<imageExpression><![CDATA["C:/Users/userpc/Desktop/IReport video/Picture2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="122" y="90" width="310" height="30" uuid="a436eec7-e957-4633-bc44-fa15ffdf8c84"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bodoni MT Black" size="18" isBold="true" pdfFontName="Bodoni MT Black" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Center of  Competence-Adama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="61" width="364" height="30" uuid="885f45d8-e010-4f71-9645-0034d9b3291d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bodoni MT Black" size="20" isBold="true" pdfFontName="Bodoni MT Black" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[OROMIYA TVET COMMISSION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="340" width="155" height="30" uuid="cc5b9bbd-9122-49ef-9ddd-050df892fa8d"/>
+				<textElement>
+					<font fontName="Century Schoolbook" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[This is to certify that ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="380" width="445" height="41" uuid="a871fab1-bdec-4e08-a095-dc278ae418c8"/>
+				<textElement>
+					<font fontName="Century Schoolbook" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[has   demonstrated   competence   against   the   National     Occupational standards on:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="470" width="445" height="70" uuid="e4f4ef5b-e9e6-456f-a2a3-aff856cfe527"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Century Schoolbook" size="14" isBold="false"/>
+					<paragraph lineSpacingSize="1.5"/>
+				</textElement>
+				<text><![CDATA[This   certificate   of   competence  has  been  given   pending the printing and issuance of the actual National certificate.
+This certificate     shall    be  surrendered    when   claiming      the original  National Certificate.
+
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="430" width="503" height="30" forecolor="#BF0B08" uuid="f6316537-d93e-48eb-81a3-3e90b45a9e5e"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fieldOfStudy} + "  " + $F{level}.toString()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="140" y="630" width="221" height="1" uuid="d242162e-cd39-4b6a-a39f-81df48eef220"/>
+			</line>
+			<staticText>
+				<reportElement x="40" y="720" width="445" height="30" uuid="32f5d2b0-33a6-4f45-9c07-cd29cea4ce91"/>
+				<textElement textAlignment="Center">
+					<font fontName="Centaur" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[This National Certificate is issued under the authority of the Ministry of Education and is recognized within the Ethiopian TVET Qualifications Framework.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="81" y="300" width="393" height="30" uuid="fa8ad54a-4fad-40cc-8807-1aae0c6a6be6"/>
+				<imageExpression><![CDATA["C:/Users/userpc/Desktop/IReport video/cirtificate.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-17" y="11" width="595" height="50" uuid="8ea7d528-8478-4adf-868d-3e91010f6130"/>
+				<imageExpression><![CDATA["C:/Users/userpc/Desktop/IReport video/Untitled.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="210" y="340" width="326" height="30" forecolor="#050505" uuid="1f7f055e-bde5-463d-941f-0b35cd8f037f"/>
+				<textElement>
+					<font fontName="Century Schoolbook" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fName} + " " + $F{mName}+" "+$F{lName}.toString()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="764" width="445" height="16" uuid="04324913-e071-49f8-a5b4-30c675e36456"/>
+				<textElement textAlignment="Center">
+					<font fontName="Centaur" size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[System Designed By: Asnake Ayele [Sudo System Engineering ,+251911622139]]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
