@@ -26,9 +26,7 @@ import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-
 public class TableToolTip {
-
     private final Map<String, URL> fileMap;
     String sqlQuery;
     File temp;
@@ -43,7 +41,6 @@ public class TableToolTip {
         fileMap = new HashMap<>();
         table = createTable();
     }
-
     public JTable createTable() {
         JTable table = new JTable(createModel()) 
         {
@@ -149,7 +146,6 @@ public class TableToolTip {
         }
         return model;
     }
-
     /*public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
